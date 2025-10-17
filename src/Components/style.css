@@ -1,0 +1,32 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* background: red; */
+}
+.CounterApp{
+    display: flex;
+    justify-content: center;
+    margin: 100px auto;
+}
+
+h1{
+    text-align: center;
+}
+
+.content{
+    margin: 50px 0;
+}
+
+.increment{
+    padding: 15px 20px;
+     border: 2px solid black;
+}
+
+.decrement{
+    padding: 15px 20px;
+    border: 2px solid black;
+}
