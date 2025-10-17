@@ -19,7 +19,7 @@ import "./style.css"
       <h1>{count}</h1>
       <div className='content'>
         <button className='increment' onClick={increment}>Increment</button>
-        <button className='decrement' onClick={decrement}>deccrement</button>
+        <button className='decrement' onClick={decrement}>Deccrement</button>
       </div>
 
         </div>
