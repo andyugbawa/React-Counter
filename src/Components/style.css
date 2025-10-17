@@ -18,15 +18,19 @@ h1{
 }
 
 .content{
+    display: flex;
+    gap:20px;
     margin: 50px 0;
 }
 
 .increment{
     padding: 15px 20px;
      border: 2px solid black;
+     background: green;
 }
 
 .decrement{
     padding: 15px 20px;
     border: 2px solid black;
+    background: red;
 }
