@@ -1,36 +1,162 @@
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
+/* Reset and global setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    /* background: red; */
-}
-.CounterApp{
-    display: flex;
-    justify-content: center;
-    margin: 100px auto;
+/* Light and dark body themes */
+body.light {
+  background-color: #f4f4f4;
+  color: #111;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-h1{
-    text-align: center;
+body.dark {
+  background-color: #111;
+  color: #f4f4f4;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-.content{
-    display: flex;
-    gap:20px;
-    margin: 50px 0;
+/* CounterApp container */
+.CounterApp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-.increment{
-    padding: 15px 20px;
-     border: 2px solid black;
-     background: green;
+/* Typography */
+h1 {
+  text-align: center;
 }
 
-.decrement{
-    padding: 15px 20px;
-    border: 2px solid black;
-    background: red;
+/* Button container */
+.content {
+  display: flex;
+  gap: 20px;
+  margin: 50px 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Buttons */
+button {
+  padding: 15px 20px;
+  border: 2px solid black;
+  color: white;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.increment { background: green;  border-radius: 30px; }
+.decrement { background: red; border-radius: 30px; }
+.save { background: blue;  border-radius: 30px;  padding: 15px 20px;}
+.theme-toggle { background: purple;  border-radius: 30px; }
+
+button:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+.reset {
+  background: orange;
+  padding: 15px 20px;
+  border-radius: 30px;
+}
+
+.delete {
+  background: crimson;
+}
+
+.delete-all {
+  background: black;
+  color: white;
+}
+
+
+/* Make borders visible in dark mode */
+body.dark button {
+  border-color: white;
+}
+
+
+/* Theme containers */
+.CounterApp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Light theme */
+.CounterApp.light {
+  background-color: #f4f4f4;
+  color: #111;
+}
+
+/* Dark theme */
+.CounterApp.dark {
+  background-color: #111;
+  color: #f4f4f4;
+}
+
+/* Typography */
+h1 {
+  text-align: center;
+}
+
+/* Content wrapper */
+.content {
+  display: flex;
+  gap: 20px;
+  margin: 50px 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Button base style */
+button {
+  padding: 15px 20px;
+  border: 2px solid black;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Individual button colors */
+.increment {
+  background: green;
+}
+
+.decrement {
+  background: red;
+}
+
+.save {
+  background: blue;
+}
+
+.theme-toggle {
+  background: purple;
+}
+
+/* Hover effects */
+button:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+
+/* Optional: adjust button borders for dark mode */
+.CounterApp.dark button {
+  border-color: white;
 }
